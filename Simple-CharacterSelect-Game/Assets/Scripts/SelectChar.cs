@@ -32,8 +32,6 @@ public class SelectChar : MonoBehaviour
         DataManager.instance.currentCharacter = character;
         OnSelect();
 
-        Debug.Log(chars.Length);
-
         for(int i = 0; i < chars.Length; i++)
         {
             if (chars[i] != this)
@@ -47,7 +45,6 @@ public class SelectChar : MonoBehaviour
     {
         anim.SetBool("run", false);
         sr.color = new Color(0.5f, 0.5f, 0.5f);
-        Debug.Log("Deselect: " + character);
     }
 
     void OnSelect()
